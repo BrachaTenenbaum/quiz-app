@@ -1,0 +1,94 @@
+/*html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+/**
+ * HTML5 display-role reset for older browsers
+ */
+/*article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+} */
+/**
+ * End of Reset
+ */
+
+ /**
+ * Start of Custom Styles
+ */
+
+body {
+  background-color: #D3D3D3;
+  font-family: 'Lato', sans-serif; 
+  text-align: center;
+ }
+
+.buttons {
+ 	padding-top: 1rem;
+  text-align: center;
+}
+
+ h1 {
+  text-align: center;
+  margin-top: 8rem;
+ }
+
+.btn {
+  border-radius: 10px;
+  padding: 15px 25px;
+  font-size: 22px;
+  text-decoration: none;
+  margin: 0 10px 0 20px;
+  color: #fff;
+  position: relative;
+  
+}
+
+.btn:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
+
+.green {
+  background-color: #52e091;
+  box-shadow: 0px 5px 0px 0px #1fad5e;
+  float: right;
+}
+
+.green:hover {
+  background-color: #a9efc8;
+}
+
+.blue {
+  background-color: #55acee;
+  box-shadow: 0px 5px 0px 0px #3C93D5;
+  float: left;
+}
+
+.blue:hover {
+  background-color: #6FC6FF;
+}
