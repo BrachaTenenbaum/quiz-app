@@ -60,11 +60,13 @@ h3 {
   height: 50%;
   width: 50%;
   padding: 6.5px;  
+  display: none;
 }
 
 button { /*center the answer options */
   text-align: center;
-  background-color: #52e091;d
+  background-color: #52e091;
+  display: none;
 }
 
 button:hover {
