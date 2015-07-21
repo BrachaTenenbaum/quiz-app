@@ -1,10 +1,11 @@
 
  //////////////////Game JS///////////////////
  ///////////////////////////////////////////
-
+var currentQuestionNumber = 0;
+//var currentQuestion = null;
 var score = 0;
 var quiz = {
- 	question: [{
+ 	questions: [{
  		prompt: "The Flathead Indian Reservation is home to the which of the following tribes?",
  		answer: ["Pueblo, Shoshoni, Ute and Washo Tribes",
  				 "The Bitterroot Salish, Kootenai, and Pend d'Oreilles Tribes", 
@@ -41,7 +42,7 @@ var quiz = {
  				 "The Flathead Allotment act allowed for the US Governmet to set aside surplus land for its own use.", 
  				 "The Flathead Allotment act divided the entire Flathead reservation evenly among Tribal members, giving couples approximatley 160,000 acres of land and singles 80,000 acres of land each."
  				 ],
- 		Correctanswer: 2
+ 		correctAnswer: 2
 
  	}, {
  		prompt: "Although the US Government has taken steps to repair the breach of the Treaty of Hell Gate, which of the following currenlty prevents the Confederated Salish and Kootenai Tribes from going back to their original ownership of the land given to them at the Treaty of Hell Gate?",
@@ -54,53 +55,67 @@ var quiz = {
  	}]
  }; 
 
-function updateQuestion(questionNumber) {
- 	var question = quiz.question[questionNumber];
- 	var answerButtons = $('.question button');
- 	//var answer = $('question.correctAnswer'); //assign correct answer to variable here
- 	$('.question h3').text(question.prompt); 
 
-	// One question is displayed at a time
- 	for( var i = 0; i < question.length; i++) {
- 	answerButtons.eq(i).text(question.answer[i]);
+//Alert message when correct or incorrect anwer is selected
+function buttonClickHandler() {
+	var currentQuestion = quiz.questions[currentQuestionNumber];
+	console.log('Button Click'); 
+ 	if ($('.question button').index(this) === currentQuestion.correctAnswer) { 
+		alert('Correct!');
+		score++;
+		currentQuestionNumber++; 
+		updateQuestion(currentQuestionNumber);
+	} else {
+		alert('Nope, try again!');
 
- 		if (answer.click) { //if click on correct answer 
- 		alert('Correct!');
- 		score++;
- 		} else {
- 		alert('Nope, try again!');
- 		}
- 	}
- }	
- 	
+	} 
 
-// Fist question is displayed 
-function displayFirstQuestion() {		
-  //var currentQuestion = quiz.question[0];
-  updateQuestion(0);
 }
 
+//Questions are updated 
+function updateQuestion(questionNumber) {
+	if (questionNumber < quiz.questions.length) {
+		var currentQuestion = quiz.questions[questionNumber];
+	 	var answerButtons = $('.question button');
+	 	$('.question h3').text(currentQuestion.prompt); 
+
+		// One question is displayed at a time
+	 	for( var i = 0; i < currentQuestion.answer.length; i++) { 
+	 		answerButtons.eq(i).text(currentQuestion.answer[i]);
+	 	}
+ 	} else {
+ 		//Score and message 
+		var message = 'You got ' + score;
+		message +=' out of ' + quiz.questions.length;
+		message += ' questions correct.';
+		if (score >= 5) {  
+			confirm(message + ' Great job!') //read on this + change. renew game. 
+		} else {
+			alert(message + ' Review the history and try again!'); //add learn. 
+		}
+		displayFirstQuestion();
+	}
+ }	
+
+// Fist question is displayed 
+function displayFirstQuestion() {
+currentQuestionNumber = 0
+score = 0		
+  updateQuestion(0);
+}
+ 	
+
  //newGame();
-$(document).ready(function () {
+ $(document).ready(function () {
+	displayFirstQuestion();
 	console.log('ready!');
 	$('h3').show();	 
-	$(displayFirstQuestion);
+	$('button').click(buttonClickHandler);
+	
 }); 
 
-//when complete game- if all answered correctly, congrats message. 
-//If 2 or more answered incorrectly, Review history lesson and play again message. 
 
-/*var message = 'You got ' + score + ' out of 6 questions correct.';
-	if ((quesion[5].click) && (score > 5)) { //when reach the last questions 
-		alert(message + ' Great job!')
-	} else {
-	alert(message + ' Review the history and try again!');
-} */
-
-
-//new game, home or learn clears tracker, re-starts game from first question
-
-
+ 
  
   
  ///////////////////Learn JS/////////////////////////
