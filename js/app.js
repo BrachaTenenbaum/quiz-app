@@ -15,7 +15,7 @@ var quiz = {
  	}, {
  		prompt: "The smallpox outbreak of the 1780's, introduced by the white settlers, killed what percentage of the Salish Tribe?",
  		answer: ["50% to 75%",
- 				 "5% to 50%",
+ 				 "25% to 50%",
  				 "75% to 85%"
  				 ],
  		correctAnswer: 0
@@ -91,7 +91,7 @@ function updateQuestion(questionNumber) {
 		if (score >= 5) {  
 			confirm(message + ' Great job!') //read on this + change. renew game. 
 		} else {
-			alert(message + ' Review the history and try again!'); //add learn. 
+			alert(message + ' Review the history and try again!'); //add learn. // no score- learn more. 
 		}
 		displayFirstQuestion();
 	}
@@ -118,16 +118,7 @@ score = 0
  
  
   
- ///////////////////Learn JS/////////////////////////
- ////////////////////////////////////////////////////
 
- //coverflow for each chapter
-
- //click on image/chapter and history of text fades in
-
- //click next/back to go to next chapter or previous chapter
-
- //last chapter- message- now ready to be testeed, play game! 
 
 
   

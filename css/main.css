@@ -43,43 +43,40 @@ ol, ul {
 
 html { 
   margin: 0; padding: 0;
-  background: url(images/res.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url(../images/Res.jpg) no-repeat top center fixed; 
   background-size: cover;
 }
 
 body {
-	background-color: #D3D3D3;
-	font-family: 'Lato', sans-serif; 
+	/*background-color: #D3D3D3;*/
+	font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-h2 { /*cover flow entire page background/* 
-	/*background-image: url('../images/res.jpg'); */
+h2 {  /*cover flow entire page background*/
 	color: #fff;
 	text-shadow: 2px 2px #A9A9A9;
   font-weight: 100;
   font-size: 1.5rem;
   text-align: center;
-  background-color: #55acee;
+  background-color: rgba(151, 182, 205, 0.55);
   padding: 15px 25px;
   box-shadow: 0px 5px 0px 0px #3C93D5;
-  margin: 4rem 4rem 2rem 4rem;
+  /*margin: 4rem 4rem 2rem 4rem;*/
 	border-radius: 10px
 }
 
 /* original code */ 
-/*.imageRes {
+/*body {
  	  background-image: url('../images/Res.jpg');
-    background-repeat: no-repeat center center fixed;
+    background-repeat: repeat center center fixed;
     background-size: cover;
-    height: 15rem;
     overflow: auto;
-    text-align: center; */
+    text-align: center; 
 
  }
-
+*/
  .buttons {
  	padding-top: 50px;
     text-align: center;
@@ -125,6 +122,6 @@ h2 { /*cover flow entire page background/*
 }
 
 
-
+ 
 
 
