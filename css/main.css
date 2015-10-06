@@ -43,7 +43,7 @@ ol, ul {
 
 html { 
   margin: 0; padding: 0;
-  background: url(../images/Res.jpg) no-repeat top center fixed; 
+  background: url(../images/montana.jpg) no-repeat top center fixed; 
   background-size: cover;
 }
 
@@ -54,34 +54,34 @@ body {
   padding: 0;
 }
 
+.main {
+  border: 7px #8D8072 double;
+  border-radius: 6px;
+  background-color: white;
+  height: 230px;
+  width: 500px;
+  margin: 135px auto;
+  opacity: 0.6;
+}
+
 h2 {  /*cover flow entire page background*/
-	color: #fff;
-	text-shadow: 2px 2px #A9A9A9;
+	color: #000;
+	/*text-shadow: 2px 2px #A9A9A9;*/
   font-weight: 100;
   font-size: 1.5rem;
   text-align: center;
-  background-color: rgba(151, 182, 205, 0.55);
-  padding: 15px 25px;
-  box-shadow: 0px 5px 0px 0px #3C93D5;
+  /*background-color: rgba(151, 182, 205, 0.55);*/
+  padding: 5px 12px;
+  /*box-shadow: 0px 5px 0px 0px #3C93D5;*/
   /*margin: 4rem 4rem 2rem 4rem;*/
 	border-radius: 10px
 }
 
-/* original code */ 
-/*body {
- 	  background-image: url('../images/Res.jpg');
-    background-repeat: repeat center center fixed;
-    background-size: cover;
-    overflow: auto;
-    text-align: center; 
-
- }
-*/
  .buttons {
- 	padding-top: 50px;
-    text-align: center;
-
-
+ 	padding-top: 4px;
+  text-align: center;
+  opacity: 0.7px;
+  margin: -11px 96px;
  }
 
 .btn {
@@ -90,9 +90,10 @@ h2 {  /*cover flow entire page background*/
   font-size: 22px;
   text-decoration: none;
   margin: 0 10px 0 20px;
-  color: #fff;
+  color: #000;
   position: relative;
-  
+  width: 64px;
+  height: 25px;
 }
 
 .btn:active {
@@ -101,20 +102,20 @@ h2 {  /*cover flow entire page background*/
   box-shadow: 0px 1px 0px 0px;
 }
 
-.red {
+.green {
   background-color: #52e091;
   box-shadow: 0px 5px 0px 0px #1fad5e;
-  float: left;
+  float: right;
 }
 
-.red:hover {
+.green:hover {
   background-color: #a9efc8;
 }
 
 .blue {
   background-color: #55acee;
   box-shadow: 0px 5px 0px 0px #3C93D5;
-  float: right;
+  float: left;
 }
 
 .blue:hover {
